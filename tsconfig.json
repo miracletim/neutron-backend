@@ -5,14 +5,11 @@
     "target": "ES2020",
     "module": "ESNext",
     "moduleDetection": "force",
-    "jsx": "react-jsx",
-    "allowJs": true,
 
     // Bundler mode
     "moduleResolution": "bundler",
-    "allowImportingTsExtensions": true,
     "verbatimModuleSyntax": true,
-    "noEmit": true,
+    "noEmit": false,
 
     // Best practices
     "strict": true,
@@ -26,7 +23,9 @@
     "noUnusedParameters": false,
     "noPropertyAccessFromIndexSignature": false,
 
-    "rootDir": "./src",
-    "outDir": "./dist"
-  }
+    "rootDir": "src",
+    "outDir": "dist"
+  },
+  "buildOptions": { "verbose": true },
+  "include": ["./src/**/*.ts"]
 }

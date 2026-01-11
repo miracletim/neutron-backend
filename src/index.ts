@@ -12,6 +12,10 @@ const app = express();
 
 app.use(express.json());
 
+app.get("/", async (req: Request, res: Response) => {
+  res.send("Server is running");
+});
+
 app.post("/create-payment-intent", async (req: Request, res: Response) => {
   const paymentIntent = await stripe.paymentIntents.create({
     amount: 2000,
